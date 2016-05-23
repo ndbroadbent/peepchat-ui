@@ -4,7 +4,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    cdn: {
+      files: [{
+        file: '**/jquery.*js',
+        cdn: 'google:jquery'
+      }]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
